@@ -17,6 +17,7 @@
                 </div>
             </div>
         {% endfor %}
+        <a href="{% url 'create' %}" class="btn btn-primary">投稿</a>
         <a href="{% url 'logout' %}" class="btn btn-primary">ログアウト</a>
     </div>
 {% endblock content %}
