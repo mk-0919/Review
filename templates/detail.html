@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+    <div class="container">
+        <div class="card">
+            <div class="card-header">{{ object.title }}</div>
+            <div class="card-body">
+                {% if object.product_image %}
+                    <p><img src='{{object.product_image.url}}' width=300></p>
+                {% endif %}
+                <h5 class="card-title">投稿者:{{ object.author }}</h5>
+                <p class="card-text">レビュー内容:{{ object.content }}</p>
+                <p class="card-text">レビューが参考になった人:{{ object.useful_num }}人</p>
+                <a href="{% url 'evaluation' object.pk %}" class="btn btn-primary">評価する</a>
+                <a href="{% url 'list' %}" class="btn btn-primary">一覧に戻る</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

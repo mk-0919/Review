@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <form class="form-signin" method="post">
+        {% csrf_token %}
+        <h1 class="h3 mb-3 font-weight-normal">ログインをする</h1>
+        <input type="text" id="inputEmail" class="form-control" placeholder="ユーザー名" name="username_data" required="" autofocus="">
+        <input type="password" id="inputPassword" class="form-control" placeholder="パスワード" name="password_data" required="">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">ログイン</button>
+        <p class="mt-5 mb-3 text-muted">© 2017-2024</p>
+    </form>
+</div>
+
+{% endblock content %}
